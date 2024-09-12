@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Rating App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Your Photo for Rating</h1>
+        <form id="uploadForm">
+            <input type="file" id="fileInput" accept="image/*" />
+            <button type="button" onclick="getCrop()">Crop Photo</button>
+            <button type="button" onclick="uploadImage()">Get Ratings</button>
+        </form>
+
+        <div id="ratings" class="ratings"></div>
+        <div id="cropContainer" style="display: none;">
+            <img id="imagePreview" alt="Image Preview" style="max-width: 100%;"/>
+            <button type="button" onclick="uploadCroppedImage()">Upload Cropped Image</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
